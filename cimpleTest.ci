@@ -1,0 +1,70 @@
+program x12
+{
+	declare x,y,z,b;
+	
+
+	function P1(in x , inout y)
+	{
+		declare e,f,a;
+
+		function P2(in x , inout y)
+		{
+			function P4()
+			{
+				declare x;
+				x:=a;
+			}
+			x:=1;
+		}
+		y:=0; 
+	}
+
+	function P3(in x , inout y)
+	{
+		declare e,f,b,a;
+		b:=x+6-10;
+		return ((x+y)-(a+b));
+	}
+
+	procedure proced2( in e, in f, inout z)
+	{
+		input(x);
+	}
+
+	if (x=0 and y>3)
+	{
+		y := x + 100;
+	};
+	call P3(in x , inout y);
+	
+
+	while(x<=1)
+	{
+		x:=x+1;
+	};
+
+	forcase
+	case(y >= 1){
+		x := x + 50;
+	}
+	case(y >= 200)
+		x := x + 500;
+	case(y >= 200)
+		x := x + 500;
+	default {
+		x := 1000;
+	};
+	call proced2(in x,in y,inout x );
+	print(x+y-(z/3));
+	
+	switchcase
+		case(x = 1) 
+			y := 20;
+		case(x = 2) {
+			y := 500;
+			z := 200+y;
+		}
+		default y := 1000;
+	;
+
+}.
